@@ -1,0 +1,54 @@
+﻿
+@{
+
+    var List = ViewBag.List as List<ToolsApp.EntityFramework.QLKhoThanhPham2023.QLKTP_Test>;
+}
+
+
+<table id="myTable" class="table table-bordered table-striped" width="100%">
+    <thead>
+        <tr>
+            <th></th>
+            <th width="100px"></th>
+            <td style="text-align:center">STT</td>
+            <th>CTVAITP_MATRUC</th>
+            <th>CTVAITP_SOBB</th>
+            <th>NGAYK</th>
+            <th>SOBIENBAN_CHUKYTOTRUONGKCS</th>
+            <th>NGAYTOTRUONGKY</th>
+           
+        </tr>
+    </thead>
+    <tbody>
+        @{ var STT = 1; }
+        @foreach (var item in List)
+        {
+            <tr>
+                <td></td>
+                <td>
+                    <div>
+                        <a onclick="InBienBan('@item.CTVAITP_MATRUC')" class="btn">
+                            <i class="fas fa-edit"></i> In biên bản
+                        </a>
+                    </div>
+                    
+                  
+
+                </td>
+                <td style="text-align:center">
+                    @STT
+                </td>
+                <th>@item.CTVAITP_MATRUC</th>
+                <td>@item.CTVAITP_SOBB</td>
+                <td>@item.NGAYK</td>
+                <td>@item.SOBIENBAN_CHUKYTOTRUONGKCS</td>
+                <td>@item.NGAYTOTRUONGKY</td>
+               
+            </tr>
+
+            STT++;
+        }
+    </tbody>
+</table>
+
+

@@ -1,0 +1,221 @@
+﻿
+@{
+    var list = ViewBag.List as ToolsApp.EntityFramework.QLKhoThanhPham2023.QLKTP_Test;
+    DateTime a = new DateTime();
+
+    var lst = ViewBag.sist as List<ToolsApp.EntityFramework.QLKhoThanhPham2023.QLKTP_Test>;
+}
+
+
+<style>
+    #_logo {
+        float: left;
+        padding-left: 0%;
+        padding-top: 2%;
+        width:10%;
+    }
+    #_test {
+        float: left;
+        width:60%;
+        padding-left:1%;
+        padding-bottom: 1%;
+    }
+        #_test .nameBienBan {
+            padding-left: 5%;
+            font-size: 100%;
+        }
+        #_test .ngaykiem {
+            padding-top: 3%;
+            float: left;
+           
+        }
+        #_test .maykiem {
+            padding-top: 3%;
+            padding-left: 3%;
+            float: left;
+           
+        }
+        #_test .nguongoc {
+             padding-top: 3%;
+            padding-left: 5%;
+            float: left;
+        }
+    #TTBienBan {
+        float: left;
+        padding-left: 2%;
+        padding-top:2%;
+    }
+        
+    #_ki1{
+        float:left;
+        padding-left:20%;
+    }
+    #_ki2 {
+        float: left;
+        padding-left: 40%;
+    }
+    table, th, td {
+        border: 1px solid black;
+    }
+
+    table {
+        border-collapse: collapse;
+    }
+
+
+</style>
+
+<form id="_Print">
+    <div   class="row" style="margin-bottom:5px ; " >
+       
+            <img id="_logo" src="~/Content/images/logo_tt1.png" width="10%" height="12%" />
+       
+        <div id="_test">
+            <h6>Mã biên bản</h6>
+            <h1 class="nameBienBan" >
+                BIÊN BẢN KIỂM VẢI THÀNH PHẨM
+            </h1>
+            <h6 class="ngaykiem">
+                Ngày kiểm: <b>@list.NGAYK</b>
+            </h6>
+            <h6 class="maykiem">
+                Máy kiểm: <b>01</b>
+            </h6>
+            <h6 class="nguongoc">
+                Nguồn góc: <b>01</b>
+            </h6>
+        </div>
+        <div id="TTBienBan">
+            <h5 class="sobb">Số Biên Bản:<b>@list.CTVAITP_SOBB</b> </h5>
+            <h5 class="sodh">Số Đơn Hàng:<b>CSO-27022023-02</b> </h5>
+            <h5 class="sotr">T Số Tr:<b>1</b> </h5>
+        </div>
+
+    </div>
+    <div class="row" style="margin-bottom:0.5%; width:100%">
+        <table id="myTable" class="table table-bordered table-striped" width="100%">
+
+            <thead>
+                <tr>
+                    <th rowspan="3"  style="text-align:center;"width="200px" >Mã trục nhuộm</th>
+                    <th rowspan="3" style="text-align:center;"width="100px" >tổng mét mọc</th>
+                    <th rowspan="3" style="text-align:center;" width="100px" >Vải cây</th>
+                    <th rowspan="3" style="text-align:center;" width="100px" >Vải khúc</th>
+                    <th rowspan="3" style="text-align:center;" width="100px" >Vải ký</th>
+                    <th colspan="6" style="text-align:center;">Vải hao hụt</th>
+                    <th rowspan="3" style="text-align:center;" width="100px" >Độ co thực tế</th>
+                    <th rowspan="3" style="text-align:center;"width="100px" >% Hao hụt</th>
+
+                </tr>
+                <tr>
+                    <th rowspan="2" style="text-align:center;" width="100px">Đầu cây</th>
+                    <th rowspan="2" style="text-align:center;" width="100px" >Thương mại</th>
+                    <th colspan="2"  style="text-align:center;">Cắt mẩu</th>
+                    <th rowspan="2"  style="text-align:center;" width="100px">Trong QT nhuộm HT</th>
+                    <th rowspan="2"  style="text-align:center;" width="100px">Tổng số mét thành phẩm</th>
+
+                </tr>
+                <tr>
+                    <th rowspan="1" style="text-align:center;"  width="100px">KD</th>
+                    <th rowspan="1" style="text-align:center;"  width="100px">Nhuộm</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+
+                    <th style="text-align:center;">@list.CTVAITP_MATRUC</th>
+                    <td style="text-align:center;">@list.CTVAITP_SOBB</td>
+                    <td style="text-align:center;"></td>
+                    <td style="text-align:center;"></td>
+                    <td style="text-align:center;"></td>
+                    <td style="text-align:center;"></td>
+                    <td style="text-align:center;"></td>
+                    <td style="text-align:center;"></td>
+                    <td style="text-align:center;"></td>
+                    <td style="text-align:center;"></td>
+                    <td style="text-align:center;"></td>
+                    <td style="text-align:center;"></td>
+                    <td style="text-align:center;"></td>
+                 
+                </tr>
+
+            </tbody>
+          
+        </table>
+    </div>
+    
+    <div class="row">
+        <table id="myTable" class="table table-bordered table-striped" width="100%">
+            <thead>
+                <tr>
+          
+                    <td style="text-align:center">STT</td>
+                    <th>Mã hàng</th>
+                    <th>Mã cây</th>
+                    <th>Khổ</th>
+                    <th>Chiều dài</th>
+                    <th>Chất lượng</th>
+                    <th>Chi tiết lổi</th>
+                    <th>KCS1</th>
+                    <th>KCS2</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{ var STT = 1; }
+             
+                <tr>
+
+                    <td style="text-align:center">
+                        @STT
+                    </td>
+                    <th>@list.CTVAITP_MATRUC</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+
+
+    <div class="row">
+
+        <div id="_ki1">
+           <h6> Ngày: <b>20/05/2022</b></h6>
+            <h5><b>Tổ trưởngKCS</b></h5>
+            <div>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br /> 
+                <br />
+
+            </div>
+        </div>
+        <div id="_ki2">
+            <h6> Ngày: <b>20/05/2022</b></h6>
+            <h5><b>người nhập phiếu</b></h5>
+            <div>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+
+            </div>
+        </div>
+
+
+    </div>
+</form>
+ 
+

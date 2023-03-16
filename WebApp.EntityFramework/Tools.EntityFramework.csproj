@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{09FB5F94-F36B-4EAB-8559-596D15D88473}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ToolsApp.EntityFramework</RootNamespace>
+    <AssemblyName>ToolsApp.EntityFramework</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QUANLYKHO\ct_phieuNhap_QLK.cs">
+      <DependentUpon>QUANLYKHO.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QUANLYKHO\Donvinhap_QLK.cs">
+      <DependentUpon>QUANLYKHO.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QUANLYKHO\Giamgia_QLK.cs">
+      <DependentUpon>QUANLYKHO.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QUANLYKHO\Hangtang_QLK.cs">
+      <DependentUpon>QUANLYKHO.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QUANLYKHO\Kekho_QLK.cs">
+      <DependentUpon>QUANLYKHO.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QUANLYKHO\kho_QLK.cs">
+      <DependentUpon>QUANLYKHO.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QUANLYKHO\loaisp_QLK.cs">
+      <DependentUpon>QUANLYKHO.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QUANLYKHO\phieuNhap_QLK.cs">
+      <DependentUpon>QUANLYKHO.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QUANLYKHO\QUANLYKHO.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QUANLYKHO.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QUANLYKHO\QUANLYKHO.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QUANLYKHO.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QUANLYKHO\QUANLYKHO.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QUANLYKHO.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="QUANLYKHO\Sanphamgiamgia_QLK.cs">
+      <DependentUpon>QUANLYKHO.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QUANLYKHO\sanpham_QLK.cs">
+      <DependentUpon>QUANLYKHO.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QUANLYKHO\Tangkekho_QLK.cs">
+      <DependentUpon>QUANLYKHO.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QUANLYNHANSU\DMNHANVIEN.cs">
+      <DependentUpon>QUANLYNHANSU.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QUANLYNHANSU\Menu.cs">
+      <DependentUpon>QUANLYNHANSU.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QUANLYNHANSU\Page.cs">
+      <DependentUpon>QUANLYNHANSU.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QUANLYNHANSU\Phuongxa_QLNS.cs">
+      <DependentUpon>QUANLYNHANSU.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QUANLYNHANSU\Quanhuyen_QLNS.cs">
+      <DependentUpon>QUANLYNHANSU.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QUANLYNHANSU\QUANLYNHANSU.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QUANLYNHANSU.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QUANLYNHANSU\QUANLYNHANSU.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QUANLYNHANSU.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QUANLYNHANSU\QUANLYNHANSU.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QUANLYNHANSU.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="QUANLYNHANSU\Role.cs">
+      <DependentUpon>QUANLYNHANSU.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QUANLYNHANSU\Tinhthanh_QLNS.cs">
+      <DependentUpon>QUANLYNHANSU.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QUANLYNHANSU\User.cs">
+      <DependentUpon>QUANLYNHANSU.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QUANLYNHANSU\User_Page.cs">
+      <DependentUpon>QUANLYNHANSU.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QUANLYNHANSU\User_Role.cs">
+      <DependentUpon>QUANLYNHANSU.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="packages.config" />
+    <EntityDeploy Include="QUANLYNHANSU\QUANLYNHANSU.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QUANLYNHANSU.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="QUANLYKHO\QUANLYKHO.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QUANLYKHO.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="QUANLYKHO\QUANLYKHO.edmx.diagram">
+      <DependentUpon>QUANLYKHO.edmx</DependentUpon>
+    </None>
+    <None Include="QUANLYNHANSU\QUANLYNHANSU.edmx.diagram">
+      <DependentUpon>QUANLYNHANSU.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="QUANLYKHO\QUANLYKHO.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QUANLYKHO.edmx</DependentUpon>
+      <LastGenOutput>QUANLYKHO.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="QUANLYKHO\QUANLYKHO.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QUANLYKHO.edmx</DependentUpon>
+      <LastGenOutput>QUANLYKHO.cs</LastGenOutput>
+    </Content>
+    <Content Include="QUANLYNHANSU\QUANLYNHANSU.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QUANLYNHANSU.edmx</DependentUpon>
+      <LastGenOutput>QUANLYNHANSU.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="QUANLYNHANSU\QUANLYNHANSU.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QUANLYNHANSU.edmx</DependentUpon>
+      <LastGenOutput>QUANLYNHANSU.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,55 @@
+﻿@{
+    var List = ViewBag.List as IEnumerable<ToolsApp.EntityFramework.QUANLYNHANSU.User>;
+}
+
+<table id="myTable" class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th></th>
+            <th>.No</th>
+            <th>Username</th>
+            <th>Fullname</th>
+            <th>Functions</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{ var STT = 1; }
+        @foreach (var item in List)
+        {
+        <tr>
+            <td style="width:100px!important">
+                <a onclick="Edit('@item.Id')" class="btn">
+                    <i class="fas fa-edit"></i> Edit
+                </a>
+                <a onclick="Delete('@item.Id')" class="btn">
+                    <i class="far fa-trash-alt"></i> Delete
+                </a>
+            </td>
+            <td>
+                @STT
+            </td>
+            <td onclick="Edit('@item.Id')">@item.Username</td>
+            <td onclick="Edit('@item.Id')">@item.Fullname</td>            
+            <td onclick="Edit('@item.Id')">
+                @{
+                    if (item.User_Page != null)
+                    {
+                        <ul>
+                            @foreach (var value in item.User_Page)
+                            {
+                                <li style="list-style-type: none;">
+                                    <small class="badge badge-success"><i class="far fa-clock"></i> @value.Page.Code - @value.Page.Info </small>
+                                </li>
+                            }
+                        </ul>
+                    }
+                }
+            </td>            
+            <td onclick="Edit('@item.Id')">@item.Email</td>
+        </tr>
+
+            STT++;
+        }
+    </tbody>
+</table>
